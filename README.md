@@ -4,11 +4,11 @@ September 2021
 
 By [Trey Jones](https://github.com/Trey314159).
 
-This library provides implementations in Java, Perl, and (eventually) Python to
-reorder syllables in Khmer script for the *purposes of search.* Characters are
-reordered in canonical order; duplicate characters (especially diacritics) are
-removed; invisible characters are removed; variant, obsolete, and deprecated
-characters are replaced or removed.
+This library provides implementations in Java, Perl, and Python to reorder
+syllables in Khmer script for the *purposes of search.* Characters are reordered
+in canonical order; duplicate characters (especially diacritics) are removed;
+invisible characters are removed; variant, obsolete, and deprecated characters
+are replaced or removed.
 
 The algorithm is perhaps a little aggressive for non-search applications; some
 of the normalizations would change the appearance of syllables. More details on

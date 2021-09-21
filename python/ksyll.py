@@ -1,4 +1,4 @@
-#! /usr/bin/perl
+#!/usr/bin/env python
 
 # A simple command-line driver for line-by-line KhmerSyllableReordering of a
 # text file.
@@ -25,23 +25,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-use strict;
-use warnings;
-use utf8;
+import sys
 
-# tell perl to look for KhmerSyllableReorder.pm in this directory
-use FindBin 1.51 qw( $RealBin );
-use lib $RealBin;
+from KhmerSyllableReorder import KhmerSyllableReorder
 
-use KhmerSyllableReorder;
+if sys.version_info[0] != 3:
+    print("This script requires Python 3")
+    exit()
 
-use open qw(:std :utf8);
-binmode( STDOUT, ':encoding(UTF-8)' );
+KSR = KhmerSyllableReorder()
 
-my $FILE;
-open $FILE, '<', $ARGV[0];
-while ( my $line = <$FILE> ) {
-    print KhmerSyllableReorder::reorderText($line);
-}
-close $FILE;
-
+file = open(sys.argv[1], 'r')
+for line in file:
+    print(KSR.reorderText(line), end='')

@@ -1,6 +1,6 @@
 ## Khmer Syllable Reordering for Search ##
 
-April 2021
+September 2021
 
 By [Trey Jones](https://github.com/Trey314159).
 
@@ -186,7 +186,9 @@ file name on the command line and writes the rewritten text to `STDOUT`.
 
 ### Python Implementation ###
 
-Forthcoming.
+The algorithm is available as a Python module, `KhmerSyllableReorder.py` in the
+`python/` directory. There is also a command line driver, `ksyll.py`, that takes a
+file name on the command line and writes the rewritten text to `STDOUT`.
 
 ### Elasticsearch Plugin ###
 
@@ -213,7 +215,7 @@ syllables](https://software.sil.org/downloads/r/mondulkiri/Mondulkiri-5.513-Orth
 (PDF) from SIL
 * [The Unicode Standard, Version 6.1—Southeast Asian
 Scripts](http://www.unicode.org/versions/Unicode6.1.0/ch11.pdf) (PDF),
-specifically Section 11.4.
+specifically Section 11.4
 * [Ordering rules for
 Khmer](http://www.open-std.org/jtc1/sc22/wg20/docs/n1076-Khmer-order11.pdf)
 (PDF)

@@ -158,8 +158,8 @@ public class KhmerSyllableReorder {
         }
 
         // reorder subscript consonants (ro is always last)
-        int coengNum = coengChunks.size();
-        for (int i = 0; i < coengNum; i++) {
+        int numCoeng = coengChunks.size() - 1;
+        for (int i = 0; i < numCoeng; i++) {
             if (coengChunks.get(i).startsWith(coengRo)) {
                 coengChunks.add(coengChunks.get(i));
                 coengChunks.set(i, "");

@@ -93,9 +93,9 @@ sub reorderSyll {
         }
 
         # re-order supplementary consonants (ro is always last)
-        my $numCoeng = scalar(@coeng);
+        my $numCoeng = scalar(@coeng) - 2;
         foreach my $i ( 0 .. $numCoeng ) {
-            if ( $coeng[$i] && $coeng[$i] =~ /^$COENG$RO/o ) {
+            if ( $coeng[$i] =~ /^$COENG$RO/o ) {
                 push @coeng, $coeng[$i];
                 $coeng[$i] = '';
             }
